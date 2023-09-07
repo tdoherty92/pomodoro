@@ -1,13 +1,15 @@
-import React, { useEffect, useRef } from 'https://esm.sh/react@18.2.0';
-import ReactDOM from 'https://esm.sh/react-dom@18.2.0';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 
+/* Line 2 - I was getting runtime error, cannot  UNTIL i exchanged "from 'https://esm.sh/react@18.2.0' " with 'react'
+why was this? */
+
 function App() {
-  const [displayTime, setDisplayTime] = React.useState(25 * 60);
-  const [breakTime, setBreakTime] = React.useState(5);
-  const [sessionTime, setSessionTime] = React.useState(25);
-  const [timerOn, setTimerOn] = React.useState(false);
-  const [onBreak, setOnBreak] = React.useState(false);
+  const [displayTime, setDisplayTime] = useState(25 * 60);
+  const [breakTime, setBreakTime] = useState(5);
+  const [sessionTime, setSessionTime] = useState(25);
+  const [timerOn, setTimerOn] = useState(false);
+  const [onBreak, setOnBreak] = useState(false);
   const audioRef = useRef(null);
 
   const playBreakAlarm = () => {
