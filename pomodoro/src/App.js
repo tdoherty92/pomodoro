@@ -95,12 +95,12 @@ function App() {
 
   return (
     <div className="center-align">
-      <h1>Pomodoro Session Clock</h1>
+      <h1 id="title">Pomodoro Session Clock</h1>
       <div className="dual-container">
         <div id="break-label">
-          <h3>Break Time</h3>
+          
           <Length
-            title="Break Length"
+            title="Break Length (Mins)"
             placeholder="5"
             changeTime={changeTime}
             type="break"
@@ -109,9 +109,9 @@ function App() {
           />
         </div>
         <div id="session-label">
-          <h3>Session Time</h3>
+          
           <Length
-            title="Session Length"
+            title="Session Length (Mins)"
             placeholder="5"
             changeTime={changeTime}
             type="session"

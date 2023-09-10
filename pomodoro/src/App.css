@@ -1,9 +1,45 @@
+body {
+  color: rgb(236, 72, 18);
+  background-image: url('https://web-static.wrike.com/blog/content/uploads/2021/11/iStock-1302208532.jpg?av=15112cfb5bfa14185f0d98bd9d046e40');
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1vw
+}
+
 .dual-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 1000px;
+  width: 1200px;
   margin: auto;
   justify-items: center;
   align-items: center;
+}
+
+.center-align {
+  text-align: left;
+  margin-left: 100px;
+  
+}
+
+#break-label, #session-label {
+  text-align: center;
+}
+
+.time-sets {
+  display: grid;
+  grid-template-columns: 50px 100px 50px;
+  justify-items: center;
+  align-items: center;
+}
+
+button {
+  background-color: rgb(236, 72, 18);
+  border-radius: 50%;
+  border: none;
+  width: 35px;
+  height: 35px;
+}
+
+button:hover {
+  background-color: white;
   border: 1px solid black;
 }
