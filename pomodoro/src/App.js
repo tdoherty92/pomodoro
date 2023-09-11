@@ -54,20 +54,20 @@ function App() {
   // useEffect will run every time the code is re-rendered, array at end is its dependencies
 
   useEffect(() => {
-    let onBreakVariable = onBreak;
+    // let onBreakVariable = onBreak;
     let interval;
 
     if (timerOn) {
       interval = setInterval(() => {
         setDisplayTime(prev => {
-          if (prev <= 0 && !onBreakVariable) {
+          if (prev <= 0 && !onBreak) {
             playBreakAlarm();
-            onBreakVariable = true;
+            // onBreakVariable = true;
             setOnBreak(true);
             return breakTime * 60;
-          } else if (prev <= 0 && onBreakVariable) {
+          } else if (prev <= 0 && onBreak) {
             playBreakAlarm();
-            onBreakVariable = false;
+            // onBreakVariable = false;
             setOnBreak(false);
             return sessionTime * 60;
           }
